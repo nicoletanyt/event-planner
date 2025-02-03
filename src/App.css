@@ -1,0 +1,160 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #58b45c;
+  overflow-x: hidden;
+}
+#landing-page::before {
+  content: '';
+  background-image: url("/src/assets/background.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(.4) blur(2px);
+}
+#landing-page {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  place-content: center;
+  padding: 4em;
+  height: 100vh;
+  color: white;
+}
+#landing-page .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landing-page .left h3 {
+  font-weight: 400;
+}
+#landing-page .heading {
+  text-align: center;
+}
+.divider {
+  content: '';
+  display: block;
+  width: 120px;
+  border: 2px solid var(--primary-color);
+}
+#landing-page .right p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.get-started-btn {
+  background-color: var(--primary-color);
+  padding: .7em 1.5em;
+  border-radius: 3px;
+  color: white;
+}
+
+#product-list {
+  height: 100vh;
+}
+
+/* Nav.jsx */
+nav {
+  background: var(--primary-color);
+  display: grid;
+  grid-template-columns: 20% 75% auto;
+  padding: .5em 2em;
+  color: white;
+  align-items: center;
+}
+.logo {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .heading {
+  margin-left: calc(50% - 20% + 2em);
+  font-weight: normal;
+}
+.cart-button {
+  background: none;
+  position: relative;
+}
+.cart-button .icon {
+  font-size: 4em;
+  color: white;
+}
+.item-count {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  color: black;
+  font-weight: bold;
+}
+
+.product-list {
+  padding: 4em;
+}
+.plants-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 480px);
+  row-gap: 4em;
+  margin-top: 2em;
+  column-gap: 4em;
+  margin: 2em auto;
+}
+section {
+  display: grid;
+}
+.category-heading {
+  text-align: center;
+}
+.card {
+  display: grid;
+  place-content: center;
+  row-gap: 1em;
+  /* border: 2px solid black; */
+  padding: 1em;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: .1px .1px 8px .1px black;
+}
+.sale {
+  position: absolute;
+  background: orangered;
+  color: white;
+  top: 0;
+  right: 0;
+  padding: .5em;
+  border-bottom-left-radius: 4px;
+}
+.card p {
+  margin: 0;
+  text-align: center;
+}
+.card .name {
+  font-weight: bold;
+}
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /* object-position: 25% 25%; */
+}
+.card .description {
+  font-style: italic;
+}
+.card .cost {
+  color: crimson;
+}
+.card .cta {
+  color: white;
+  background: var(--primary-color);
+  width: fit-content;
+  border-radius: 7px;
+  margin: 0 auto;
+}
